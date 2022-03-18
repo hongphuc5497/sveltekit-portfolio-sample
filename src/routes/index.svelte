@@ -1,59 +1,94 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
-<script>
-	import Counter from '$lib/Counter.svelte';
-</script>
-
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
+<div class="container">
+	<div class="info">
+		<div class="animate-background">
+			<div class="container info-container">
+				<div class="info-text">
+					<h1>
+						<p class="animate-text-1">School-taught Computer Scientist,</p>
+						<p class="text-2">Self-taught Software Engineer</p>
+					</h1>
+				</div>
+
+				<h2 class="subtitle">
+					On a mission to help SMEs across the globe do businesses seamlessly and digitally
+				</h2>
+
+				<div class="scroll-button animate-scroll" style="color:black" tabindex="0">
+					<a href="/about">Click Here</a>
+					<div class="arrow">→</div>
+				</div>
+			</div>
 		</div>
+	</div>
+</div>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<div class="background-div" />
 
 <style>
-	section {
+	.info {
+		text-align: center;
+		position: relative;
+	}
+
+	.info-container {
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
-		flex: 1;
+		text-align: left;
+		align-items: start;
 	}
 
-	h1 {
-		width: 100%;
+	.container {
+		max-width: 1400px;
+		margin: 190px 0 0 2.5rem;
 	}
 
-	.welcome {
+	.info h1 {
+		font-size: 4rem;
+		margin: 0;
+	}
+
+	.info h1 p {
 		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+		font: inherit;
+		margin: 0;
+		text-align: left;
+		line-height: 130%;
+		width: fit-content;
+		font-weight: 800;
+		letter-spacing: -0.03em;
 	}
 
-	.welcome img {
-		position: absolute;
+	.info h2 {
+		max-width: 65ch;
+		font-weight: 200;
+		margin-top: 0.5rem;
+	}
+
+	.background-div {
+		background-color: var(--background);
 		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+		height: 56vh;
+		margin: -155px auto;
+	}
+
+	.info .info-text {
+		position: relative;
+	}
+
+	.scroll-button {
+		display: flex;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
+	.scroll-button .arrow {
+		margin-left: 0.5rem;
 	}
 </style>
