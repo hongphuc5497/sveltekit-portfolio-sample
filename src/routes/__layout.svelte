@@ -1,45 +1,23 @@
-<script>
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
-</script>
+<nav>
+	<div class="nav-container">
+		<a href="/" class="nav-logo" title="Back to Homepage">David Adeneye</a>
+		<div class="nav-links">
+			<a href="/about" class="link">About</a>
+			<a href="/blog" class="link">Blog</a>
+			<a href="/projects" class="link">Projects</a>
+			<a href="/contact" class="link">Contact</a>
+		</div>
+	</div>
+</nav>
 
-<Header />
-
-<main>
+<div class="container">
+	<!-- Pages will be injected below -->
 	<slot />
-</main>
-
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+</div>
 
 <style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
+	.container {
+		max-width: 1400px;
+		margin: 50px auto;
 	}
 </style>

@@ -1,5 +1,6 @@
+<!-- src/routes/index.svelte -->
 <svelte:head>
-	<title>Home</title>
+	<title>David Adeneye</title>
 </svelte:head>
 
 <div class="container">
@@ -12,13 +13,11 @@
 						<p class="text-2">Self-taught Software Engineer</p>
 					</h1>
 				</div>
-
 				<h2 class="subtitle">
-					On a mission to help SMEs across the globe do businesses seamlessly and digitally
+					On a mission to help SMEs across the globe do businesses seamlessly and digitally.
 				</h2>
-
-				<div class="scroll-button animate-scroll" style="color:black" tabindex="0">
-					<a href="/about">Click Here</a>
+				<div style="color:black" class="scroll-button animate-scroll" tabindex="0">
+					<a href="/about">See More About Me</a>
 					<div class="arrow">→</div>
 				</div>
 			</div>
@@ -45,7 +44,7 @@
 
 	.container {
 		max-width: 1400px;
-		margin: 190px 0 0 2.5rem;
+		margin: 190px 0 0 2rem;
 	}
 
 	.info h1 {
